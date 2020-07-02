@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>おみくじ</title>
+    <link rel="stylesheet" type="text/css" href="fortune.css">
+  </head>
+  <body>
+<div class="title">
+  <div class="header">
+      <h1>おぉぉおみくじぃいい</h1>
+      <h2>運試ししてみよう</h2>
+  </div>
+</div>
+
+<div class="main">
+  <div class="button">
+    <a class="button-wrapper" id=omikuji>ポチッとな</a>
+  </div>
+
+  <div class="result-wrapper">
+   <p class="result">★結果★</p>
+   <div id = aaa>
+    今日の運勢は……？
+   </div>
+  </div>
+
+ <div class="advise-wrapper">
+  <p class="bbb">★今日のアドバイス★</p>
+  <div id = advise>
+    今日はこんな風に過ごそう！！
+  </div>
+ </div>
+
+  <div id = fanb>
+  </div>
+</div>
+
+<div class="footer">
+</div>
+
+  <script>
+
+ var result
+ 　　= ["今日は無双","大吉","中吉","小吉","吉","凶","わりと凶","大凶","ヤバイ","ファンブル"];
+
+var omikuji = document.getElementById('omikuji');
+omikuji.addEventListener('click',function(){
+  var n = Math.floor(Math.random()*10)
+  var fortune = document.getElementById('aaa').innerHTML = result [n]
+
+switch (n) {
+  case 0:
+    var advise = document.getElementById('advise').innerHTML = "やりたい放題やろう"
+    var fanb = document.getElementById('fanb').innerHTML = "<br>"
+    break;
+
+  case 1:
+    var advise = document.getElementById('advise').innerHTML = "イケてる"
+    var fanb = document.getElementById('fanb').innerHTML = "<br>"
+    break;
+
+  case 2:
+    var advise = document.getElementById('advise').innerHTML = "安心していいよ"
+    var fanb = document.getElementById('fanb').innerHTML = "<br>"
+    break;
+
+  case 3:
+    var advise = document.getElementById('advise').innerHTML = "いつも通りに"
+    var fanb = document.getElementById('fanb').innerHTML = "<br>"
+    break;
+
+  case 4:
+    var advise = document.getElementById('advise').innerHTML = "無理しすぎないこと"
+    var fanb = document.getElementById('fanb').innerHTML = "<br>"
+    break;
+
+  case 5:
+    var advise = document.getElementById('advise').innerHTML = "慎重めに行こう"
+    var fanb = document.getElementById('fanb').innerHTML = "<br>"
+    break;
+
+  case 6:
+    var advise = document.getElementById('advise').innerHTML = "注意して過ごせば多分平気"
+    var fanb = document.getElementById('fanb').innerHTML = "<br>"
+    break;
+
+  case 7:
+    var advise = document.getElementById('advise').innerHTML = "マジで全体的に気をつけたほうがいい"
+    var fanb = document.getElementById('fanb').innerHTML = "<br>"
+    break;
+
+  case 8:
+    var advise = document.getElementById('advise').innerHTML = "今日は何もしないほうが……"
+    var fanb = document.getElementById('fanb').innerHTML = "<br>"
+    break;
+
+  case 9:
+    var advise = document.getElementById('advise').innerHTML = "一時的発狂↓"
+    alert("hahaha 不幸な人間だ")
+    var cthlu =
+    ["金切り声","パニック","大泣き","多弁症","恐怖症","殺人癖か自殺癖","幻覚","おうむ返ししかできない","異物を食べる","混迷"];
+    f = Math.floor(Math.random()*10)
+    var fanb = document.getElementById('fanb').innerHTML = cthlu [f]
+    break;
+}
+});
+
+    </script>
+  </body>
+</html>
